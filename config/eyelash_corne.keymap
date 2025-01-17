@@ -32,6 +32,15 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        test: test {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TEST";
+            bindings = <&kp A>, <&kp LS(A)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -67,7 +76,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB                &kp Q  &kp W  &kp E               &kp R                  &kp T                                            &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&lt 3 F14              &kp A  &kp S  &kp D               &kp F                  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&lt 3 F14              &test  &kp S  &kp D               &kp F                  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C               &kp V                  &kp B                    &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
                                      &mt LEFT_ALT MINUS  &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
@@ -84,7 +93,7 @@
                                           &mt LEFT_ALT MINUS    &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 0 ENTER  &kp SPACE  &lt 0 F13
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LG(C_VOLUME_UP) LG(C_VOLUME_DOWN)>;
         };
 
         layer_3 {
@@ -109,6 +118,18 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+        };
+
+        layer_5 {
+            display-name = "QWERTY";
+            bindings = <
+&kp TAB                &kp Q  &kp W  &kp E               &kp R                  &kp T                                            &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&lt 3 F14              &kp A  &kp S  &kp D               &kp F                  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C               &kp V                  &kp B                    &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                                     &mt LEFT_ALT MINUS  &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
