@@ -47,7 +47,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "ZNPC";
         #binding-cells = <0>;
-        bindings = <&lt 3 K_PASTE>, <&kp K_COPY>;
+        bindings = <&lt 3 C_AC_PASTE>, <&kp C_AC_COPY>;
 
         tapping-term-ms = <200>;
     };
