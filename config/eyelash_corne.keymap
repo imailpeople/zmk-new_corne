@@ -48,14 +48,14 @@
         #binding-cells = <0>;
         bindings = <&lt 3 K_PASTE>, <&kp K_COPY>;
 
-        tapping-term-ms = <150>;
+        tapping-term-ms = <175>;
     };
 
     ztff: ztff {
         compatible = "zmk,behavior-tap-dance";
         label = "ZTFF";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <175>;
         bindings = <&lt 4 TAB>, <&kp F1>;
     };
 
@@ -77,16 +77,33 @@
         mods = <(MOD_LSFT)>;
     };
 
+    zec: zec {
+        compatible = "zmk,behavior-tap-dance";
+        label = "ZEC";
+        #binding-cells = <0>;
+        tapping-term-ms = <175>;
+        bindings = <&kp ESCAPE>, <&caps_word>;
+    };
+
+    xsec: xsec {
+        compatible = "zmk,behavior-hold-tap";
+        label = "XSEC";
+        bindings = <&kp>, <&zec>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <100>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             display-name = "Colemak";
             bindings = <
-&ztff                  &kp Q  &kp W  &kp F  &kp P                  &kp G                                            &kp UP                &kp J        &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&ydnpc                 &kp A  &kp R  &kp S  &kp T                  &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
-&mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C  &kp V                  &kp B                    &kp K_MUTE              &kp DOWN              &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
-                                     &ydam  &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
+&ztff                  &kp Q  &kp W  &kp F  &kp P               &kp G                                            &kp UP                &kp J        &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+&ydnpc                 &kp A  &kp R  &kp S  &kp T               &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
+&mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C  &kp V               &kp B                    &kp K_MUTE              &kp DOWN              &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
+                                     &ydam  &xsec LEFT_SHIFT 0  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
