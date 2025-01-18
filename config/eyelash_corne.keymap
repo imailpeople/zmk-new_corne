@@ -20,6 +20,7 @@
    };
 
  */
+
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
@@ -30,8 +31,10 @@
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+
+            label = "shift caps tap dance";
         };
-	
+
         hn0: hn0 {
             compatible = "zmk,behavior-hold-tap";
             display-name = "Hold Navi";
@@ -61,6 +64,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "Shift delete mod morph";
             bindings = <&kp A>, <&kp F>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -110,9 +114,9 @@
         layer_2 {
             display-name = "NumSym";
             bindings = <
-&kp TAB                &kp LS(N1) &kp LS(MINUS)   &kp LS(EQUAL)         &kp EQUAL              &none                                            &kp UP                &none        &none      &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
-&lt 0 F14              &kp N1     &kp N2          &kp N3                &kp N4                 &kp N5                                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp N6       &kp N7     &kp N8     &kp N9            &kp N0             &kp SQT
-&mt LCTRL PRINTSCREEN  &kp GRAVE  &none           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LC(BACKSPACE)        &kp K_MUTE              &kp DOWN              &kp DELETE   &none      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSLASH
+&kp TAB                &kp LS(N1)  &kp LS(MINUS)  &kp LS(EQUAL)         &kp EQUAL              &none                                            &kp UP                &none        &none      &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
+&lt 0 F14              &kp N1      &kp N2         &kp N3                &kp N4                 &kp N5                                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp N6       &kp N7     &kp N8     &kp N9            &kp N0             &kp SQT
+&mt LCTRL PRINTSCREEN  &kp GRAVE   &none          &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LC(BACKSPACE)        &kp K_MUTE              &kp DOWN              &kp DELETE   &none      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSLASH
                                                   &mt LEFT_ALT MINUS    &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 0 ENTER  &kp SPACE  &lt 0 F13
             >;
 
@@ -156,4 +160,3 @@
         };
     };
 };
-
