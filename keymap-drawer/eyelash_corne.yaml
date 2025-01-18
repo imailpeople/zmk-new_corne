@@ -1,6 +1,6 @@
 layers:
   Colemak:
-  - '&ztff'
+  - {t: '&xtt', h: Fn}
   - Q
   - W
   - F
@@ -42,7 +42,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: \, s: '|'}
-  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - $$mdi:apple-keyboard-option$$
   - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
@@ -196,7 +196,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&mkp MB3'
   Fn:
-  - F1
+  - {t: F1, type: held}
   - F2
   - F3
   - F4
@@ -243,7 +243,7 @@ layers:
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: Colemak}
   - $$mdi:keyboard-space$$
-  - {t: F13, h: Colemak, type: held}
+  - {t: F13, h: Colemak, type: held alternate}
   temp:
   - $$mdi:keyboard-tab$$
   - Q
