@@ -86,10 +86,29 @@
         bindings = <&kp ESCAPE>, <&caps_word>;
     };
 
+    zen: zen {
+        compatible = "zmk,behavior-tap-dance";
+        label = "ZEN";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp ENTER>, <&num_word 2>;
+    };
+
     xsec: xsec {
         compatible = "zmk,behavior-hold-tap";
         label = "XSEC";
         bindings = <&kp>, <&zec>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <175>;
+        flavor = "balanced";
+    };
+
+    xnen: xnen {
+        compatible = "zmk,behavior-hold-tap";
+        label = "XNEN";
+        bindings = <&kp>, <&zen>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
