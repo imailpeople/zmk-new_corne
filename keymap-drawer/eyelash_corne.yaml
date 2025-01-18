@@ -43,7 +43,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - $$mdi:keyboard-space$$
@@ -92,7 +92,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - $$mdi:keyboard-space$$
@@ -141,7 +141,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: Colemak, type: held}
   - $$mdi:keyboard-space$$
@@ -239,7 +239,7 @@ layers:
   - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: Colemak}
   - $$mdi:keyboard-space$$
@@ -288,7 +288,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&zsec'
   - {t: \, h: LEFT META, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - $$mdi:keyboard-space$$
