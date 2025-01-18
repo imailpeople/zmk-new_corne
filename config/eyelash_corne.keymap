@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
-#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -9,6 +8,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <behaviors/num_word.dtsi>
 
 /*
 
@@ -101,14 +101,14 @@
         #binding-cells = <0>;
         bindings = <&mt LEFT_SHIFT ESCAPE>, <&caps_word>;
     };
-
+/*
     znen: znen {
         compatible = "zmk,behavior-tap-dance";
         label = "ZNEN";
         #binding-cells = <0>;
         bindings = <&lt 2>, <&num_word 2>;
     };
-
+*/
     keymap {
         compatible = "zmk,keymap";
 
