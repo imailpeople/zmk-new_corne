@@ -51,58 +51,12 @@
         tapping-term-ms = <(-100)>;
     };
 
-    zsec: zsec {
-        compatible = "zmk,behavior-tap-dance";
-        label = "ZSEC";
-        #binding-cells = <0>;
-        bindings = <&mt LEFT_SHIFT ESCAPE>, <&caps_word>;
-
-        tapping-term-ms = <(-100)>;
-    };
-
     ztff: ztff {
         compatible = "zmk,behavior-tap-dance";
         label = "ZTFF";
         #binding-cells = <0>;
-        tapping-term-ms = <(-150)>;
+        tapping-term-ms = <(-100)>;
         bindings = <&lt 4 TAB>, <&kp F1>;
-    };
-
-    zsdel: zsdel {
-        compatible = "zmk,behavior-mod-morph";
-        label = "ZSDEL";
-        bindings = <&znpc>, <&kp DELETE>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
-    };
-
-    zspdel: zspdel {
-        compatible = "zmk,behavior-mod-morph";
-        label = "ZSPDEL";
-        bindings = <&mt LEFT_ALT MINUS>, <&kp DELETE>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
-    };
-
-    xtt: xtt {
-        compatible = "zmk,behavior-tap-dance";
-        label = "XTT";
-        #binding-cells = <0>;
-        bindings = <&kp TAB>, <&kp F1>;
-    };
-
-    ytff: ytff {
-        compatible = "zmk,behavior-hold-tap";
-        label = "YTFF";
-        bindings = <&mo>, <&xtt>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        flavor = "balanced";
-        require-prior-idle-ms = <150>;
-        quick-tap-ms = <150>;
     };
 
     keymap {
@@ -111,10 +65,10 @@
         layer_0 {
             display-name = "Colemak";
             bindings = <
-&ytff 4 0              &kp Q  &kp W  &kp F         &kp P  &kp G                                            &kp UP                &kp J        &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&zsdel                 &kp A  &kp R  &kp S         &kp T  &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
+&ztff                  &kp Q  &kp W  &kp F         &kp P  &kp G                                            &kp UP                &kp J        &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+&znpc                  &kp A  &kp R  &kp S         &kp T  &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
 &mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C         &kp V  &kp B                    &kp K_MUTE              &kp DOWN              &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
-                                     &kp LEFT_ALT  &zsec  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
+                                     &kp LEFT_ALT  &none  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -123,10 +77,10 @@
         layer_1 {
             display-name = "QWERTY";
             bindings = <
-&ztff                  &kp Q  &kp W  &kp E    &kp R  &kp T                                            &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&zsdel                 &kp A  &kp S  &kp D    &kp F  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C    &kp V  &kp B                    &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                     &zspdel  &zsec  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
+&ztff                  &kp Q  &kp W  &kp E  &kp R  &kp T                                            &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&none                  &kp A  &kp S  &kp D  &kp F  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C  &kp V  &kp B                    &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                                     &none  &none  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -136,9 +90,9 @@
             display-name = "NumSym";
             bindings = <
 &kp TAB                &kp LS(N1)  &kp LS(MINUS)  &kp LS(EQUAL)         &kp EQUAL              &none                                            &kp UP                &none        &none      &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
-&zsdel                 &kp N1      &kp N2         &kp N3                &kp N4                 &kp N5                                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp N6       &kp N7     &kp N8     &kp N9            &kp N0             &kp SQT
+&none                  &kp N1      &kp N2         &kp N3                &kp N4                 &kp N5                                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp N6       &kp N7     &kp N8     &kp N9            &kp N0             &kp SQT
 &mt LCTRL PRINTSCREEN  &kp GRAVE   &none          &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LC(BACKSPACE)        &kp K_MUTE              &kp DOWN              &kp DELETE   &kp MINUS  &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSLASH
-                                                  &zspdel               &zsec                  &mt LEFT_META BACKSLASH                                                &lt 0 ENTER  &kp SPACE  &lt 0 F13
+                                                  &none                 &none                  &mt LEFT_META BACKSLASH                                                &lt 0 ENTER  &kp SPACE  &lt 0 F13
             >;
 
             sensor-bindings = <&inc_dec_kp LG(C_VOLUME_UP) LG(C_VOLUME_DOWN)>;
@@ -162,7 +116,7 @@
 &kp F1                 &kp F2          &kp F3           &kp F4              &kp F5           &kp F6                                           &kp UP                &kp F7        &kp F8           &kp F9     &kp F10        &kp F11  &kp F12
 &bt BT_CLR             &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3     &bt BT_SEL 4                           &kp LEFT  &kp ENTER  &kp RIGHT  &out OUT_BLE  &kp PRINTSCREEN  &kp HOME   &kp PAGE_UP    &to 0    &to 3
 &mt LCTRL PRINTSCREEN  &bt BT_CLR_ALL  &rgb_ug RGB_OFF  &rgb_ug RGB_ON      &rgb_ug RGB_EFR  &rgb_ug RGB_EFF          &kp K_MUTE              &kp DOWN              &out OUT_USB  &kp C_PAUSE      &kp END    &kp PAGE_DOWN  &to 1    &none
-                                                        &mt LEFT_ALT MINUS  &zsec            &mt LEFT_META BACKSLASH                                                &lt 0 ENTER   &kp SPACE        &lt 0 F13
+                                                        &mt LEFT_ALT MINUS  &none            &mt LEFT_META BACKSLASH                                                &lt 0 ENTER   &kp SPACE        &lt 0 F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
@@ -174,7 +128,7 @@
 &kp TAB                &kp Q  &kp W  &kp E               &kp R  &kp T                                            &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
 &lt 3 F14              &kp A  &kp S  &kp D               &kp F  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C               &kp V  &kp B                    &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                     &mt LEFT_ALT MINUS  &zsec  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
+                                     &mt LEFT_ALT MINUS  &none  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
