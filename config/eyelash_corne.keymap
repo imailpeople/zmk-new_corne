@@ -102,6 +102,13 @@
         bindings = <&mt LEFT_SHIFT ESCAPE>, <&caps_word>;
     };
 
+    znen: znen {
+        compatible = "zmk,behavior-tap-dance";
+        label = "ZNEN";
+        #binding-cells = <0>;
+        bindings = <&lt 2>, <&num_word 2>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
