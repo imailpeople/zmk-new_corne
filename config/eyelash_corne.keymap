@@ -26,48 +26,6 @@
 
 / {
     behaviors {
-        sc0: sc0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-
-            label = "shift caps tap dance";
-        };
-
-        hn0: hn0 {
-            compatible = "zmk,behavior-hold-tap";
-            display-name = "Hold Navi";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        cpn0: cpn0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Copy/Paste/Navi Tap/Hold Dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&holdnavi 3 K_PASTE>, <&kp K_COPY>;
-        };
-
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Copy/Paste Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp K_PASTE>, <&kp K_COPY>;
-        };
-
-        mrp0: mrph0 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Shift delete mod morph";
-            bindings = <&kp A>, <&kp F>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -91,7 +49,7 @@
             display-name = "Colemak";
             bindings = <
 &kp TAB                &kp Q  &kp W  &kp F               &kp P                  &kp G                                            &kp UP                &kp J        &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&cpn0                  &kp A  &kp R  &kp S               &kp T                  &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
+&none                  &kp A  &kp R  &kp S               &kp T                  &kp D                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N      &kp E      &kp I    &kp O          &kp SQT
 &mt LCTRL PRINTSCREEN  &kp Z  &kp X  &kp C               &kp V                  &kp B                    &kp K_MUTE              &kp DOWN              &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
                                      &mt LEFT_ALT MINUS  &mt LEFT_SHIFT ESCAPE  &mt LEFT_META BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lt 4 F13
             >;
