@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 600  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
 
 #include <dt-bindings/zmk/mouse.h>
@@ -17,6 +17,7 @@
   warp {
     layers = <0>;
     input-processors = <&zip_xy_scaler 3 1>;
+    process-next;
   };
   precision {
     layers = <3>;
