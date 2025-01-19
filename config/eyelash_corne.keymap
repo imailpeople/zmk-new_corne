@@ -43,6 +43,14 @@
         tap-ms = <30>;
     };
 
+    &mmv {
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        time-to-max-speed-ms = <300>;
+        acceleration-exponent = <3>;
+    };
+
+
     znpc: znpc {
         compatible = "zmk,behavior-tap-dance";
         label = "ZNPC";
@@ -143,7 +151,7 @@
         wcpn: wcpn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(PERIOD) &caps_word>;
+            bindings = <&kp LC(PERIOD), <&macro_pause_for_release>, &num_word 2>;
             label = "WCPN";
             wait-ms = <10>;
         };
