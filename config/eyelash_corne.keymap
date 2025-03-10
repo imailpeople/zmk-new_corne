@@ -90,7 +90,7 @@
         label = "ENT_NWORD";
         #binding-cells = <0>;
         tapping-term-ms = <225>;
-        bindings = <&kp ENTER>, <&num_word 2>;
+        bindings = <&kp ENTER>, <&num_word 3>;
     };
 
     kp_Esc_CWord: kp_Esc_CWord {
