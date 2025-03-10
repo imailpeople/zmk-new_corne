@@ -125,7 +125,8 @@
         #binding-cells = <2>;
         hold-while-undecided;
         tapping-term-ms = <200>;
-        flavor = "balanced";
+        flavor = "hold-preferred";
+        retro-tap;
     };
 
     Tab_F1: Tab_F1 {
