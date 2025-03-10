@@ -125,6 +125,7 @@
         #binding-cells = <2>;
         hold-while-undecided;
         tapping-term-ms = <200>;
+        flavor = "balanced";
     };
 
     Tab_F1: Tab_F1 {
