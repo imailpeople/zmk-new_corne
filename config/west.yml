@@ -19,5 +19,8 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: main # set to same version as zmk
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
   self:
     path: config
