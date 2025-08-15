@@ -181,9 +181,9 @@
         layer_3 {
             display-name = "Navi";
             bindings = <
-&kp TAB           &kp Q           &kp W           &kp F         &kp R            &to 0                                   &mmv MOVE_UP                     &none        &kp LS(COMMA)   &kp PAGE_DOWN   &kp PAGE_UP     &kp LS(PERIOD)   &none
-&kp LEFT_SHIFT    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &to 1                   &mmv MOVE_LEFT  &mkp MB3        &mmv MOVE_RIGHT  &kp C_PAUSE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&kp LEFT_CONTROL  &kp Z           &kp X           &kp C         &kp V            &none     &kp K_MUTE                    &mmv MOVE_DOWN                   &none        &kp C_PREVIOUS  &kp END         &kp HOME        &kp C_NEXT       &none
+&kp TAB           &kp Q           &kp W           &kp F         &kp R            &to 0                                   &mmv MOVE_UP                     &none        &kp LS(COMMA)   &kp PAGE_DOWN   &kp PAGE_UP   &kp LS(PERIOD)   &none
+&kp LEFT_SHIFT    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &to 1                   &mmv MOVE_LEFT  &mkp MB3        &mmv MOVE_RIGHT  &kp C_PAUSE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&kp LEFT_CONTROL  &kp Z           &kp X           &kp C         &kp V            &none     &kp K_MUTE                    &mmv MOVE_DOWN                   &none        &kp C_PREVIOUS  &kp END         &kp HOME      &kp C_NEXT       &none
                                                   &mkp MB3      &mkp MB1         &mkp MB2                                                                 &kp ENTER    &kp SPACE       &none
             >;
 
