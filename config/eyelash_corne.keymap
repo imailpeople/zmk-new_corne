@@ -11,12 +11,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener {
-        input-processors = <&zip_xy_scaler 3 2>;
+        input-processors = <&zip_xy_scaler 3 1>;
 };
 
 &msc_input_listener {
-        input-processors = <&zip_xy_scaler 3 3>;
-   };
+        input-processors = <&zip_xy_scaler 3 1>;
+};
 
 / {
     behaviors {
