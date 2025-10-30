@@ -1,5 +1,5 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1000  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 10
 
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
@@ -21,7 +21,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <300>;
+    time-to-max-speed-ms = <400>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
 };
@@ -85,7 +85,7 @@
     lalt_ralt_else_pause_navi: lalt_ralt_else_pause_navi {
         compatible = "zmk,behavior-mod-morph";
         label = "LALT_RALT_ELSE_PAUSE_NAVI";
-        bindings = <&lt 3 PAUSE_BREAK>, <&kp RIGHT_ALT>;
+        bindings = <&lt 3 F5>, <&kp RIGHT_ALT>;
 
         #binding-cells = <0>;
         mods = <(MOD_LALT)>;
