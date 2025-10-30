@@ -48,7 +48,7 @@ layers:
   - {t: \, h: LGUI, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - $$mdi:keyboard-space$$
-  - {t: PAUSE BREAK, h: Navi, s: '$$mdi:apple-keyboard-option$$'}
+  - Navi
   Colemak:
   - {t: '&Tab_F1', h: Fn}
   - Q
@@ -97,7 +97,7 @@ layers:
   - {t: \, h: LGUI, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - $$mdi:keyboard-space$$
-  - {t: PAUSE BREAK, h: Navi, s: '$$mdi:apple-keyboard-option$$'}
+  - Navi
   NumSym:
   - $$mdi:keyboard-tab$$
   - {t: Sft+1, s: Sft+!}
