@@ -95,15 +95,6 @@
         mods = <(MOD_LALT)>;
     };
 
-    laltralttest: laltralttest {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LALTRALTTEST";
-        bindings = <&lt 4 PAUSE_BREAK>, <&kp RIGHT_ALT>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LALT)>;
-    };
-
     combos { compatible = "zmk,combos"; };
 
     keymap {
@@ -112,10 +103,10 @@
         layer_0 {
             display-name = "QWERTY";
             bindings = <
-&mo_Tab_F1 4 0       &kp Q  &kp W  &kp E                &kp R                  &kp T                                       &kp UP                &kp Y        &kp U      &kp I          &kp O    &kp P     &kp BSPC
-&Alt_Del_Else_Print  &kp A  &kp S  &kp D                &kp F                  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL            &kp Z  &kp X  &kp C                &kp V                  &kp B               &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSLASH
-                                   &Sh_ShDel_Else_LAlt  &mt LEFT_SHIFT ESCAPE  &mt LGUI BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &laltralttest
+&mo_Tab_F1 4 0       &kp Q  &kp W  &kp E                &kp R                  &kp T                                       &kp UP                &kp Y        &kp U      &kp I                       &kp O    &kp P     &kp BSPC
+&Alt_Del_Else_Print  &kp A  &kp S  &kp D                &kp F                  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K                       &kp L    &kp SEMI  &kp SQT
+&kp LCTRL            &kp Z  &kp X  &kp C                &kp V                  &kp B               &kp K_MUTE              &kp DOWN              &kp N        &kp M      &kp COMMA                   &kp DOT  &kp FSLH  &kp BACKSLASH
+                                   &Sh_ShDel_Else_LAlt  &mt LEFT_SHIFT ESCAPE  &mt LGUI BACKSLASH                                                &lt 2 ENTER  &kp SPACE  &lalt_ralt_else_pause_navi
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
