@@ -47,7 +47,7 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: \, h: LGUI, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
-  - {t: '$$mdi:keyboard-space$$', s: MENU}
+  - {t: '$$mdi:keyboard-space$$', s: APP}
   - {t: PAUSE BREAK, h: Navi, s: '$$mdi:apple-keyboard-option$$'}
   Colemak:
   - {t: '&Tab_F1', h: Fn}
@@ -96,7 +96,7 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: \, h: LGUI, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
-  - {t: '$$mdi:keyboard-space$$', s: MENU}
+  - {t: '$$mdi:keyboard-space$$', s: APP}
   - {t: PAUSE BREAK, h: Navi, s: '$$mdi:apple-keyboard-option$$'}
   NumSym:
   - $$mdi:keyboard-tab$$
