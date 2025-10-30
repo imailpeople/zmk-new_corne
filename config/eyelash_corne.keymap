@@ -10,6 +10,14 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&mmv_input_listener {
+        input-processors = <&zip_xy_scaler 3 2>;
+};
+
+&msc_input_listener {
+        input-processors = <&zip_xy_scaler 3 3>;
+   };
+
 / {
     behaviors {
     };
@@ -78,7 +86,7 @@
     alt_menu_else_space: alt_menu_else_space {
         compatible = "zmk,behavior-mod-morph";
         label = "ALT_MENU_ELSE_SPACE";
-        bindings = <&kp SPACE>, <&kp K_MENU>;
+        bindings = <&kp SPACE>, <&kp K_APP>;
 
         #binding-cells = <0>;
         mods = <(MOD_LALT)>;
