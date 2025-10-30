@@ -98,7 +98,7 @@
     laltralttest: laltralttest {
         compatible = "zmk,behavior-mod-morph";
         label = "LALTRALTTEST";
-        bindings = <&lt 2 PAUSE_BREAK>, <&kp RIGHT_ALT>;
+        bindings = <&lt 4 PAUSE_BREAK>, <&kp RIGHT_ALT>;
 
         #binding-cells = <0>;
         mods = <(MOD_LALT)>;
