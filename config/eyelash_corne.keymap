@@ -1,5 +1,5 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1000    // 10
 
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
@@ -9,26 +9,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-
-&mmv_input_listener {
-    warp {
-        layers = <0>;
-        input-processors = <&zip_xy_scaler 3 1>;
-        process-next;
-    };
-
-    precision {
-        layers = <3>;
-        input-processors = <&zip_xy_scaler 1 2>;
-    };
-};
-
-/*
-   &msc_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-   };
-
- */
 
 / {
     behaviors {
