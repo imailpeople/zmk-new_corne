@@ -129,7 +129,7 @@ layers:
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - {t: '`', s: '~'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Sft+`, s: Sft+~}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
   - {t: 'Ctl+$$mdi:backspace$$', type: backspace}
@@ -146,7 +146,7 @@ layers:
   - {t: \, h: LGUI, s: '|'}
   - {t: '$$mdi:keyboard-return$$', h: NumSym, type: held}
   - $$mdi:keyboard-space$$
-  - {t: PAUSE BREAK, h: Navi}
+  - {t: F5, h: Navi}
   Navi:
   - $$mdi:keyboard-tab$$
   - Q
@@ -225,7 +225,7 @@ layers:
   - PgUp
   - {t: QWERTY, h: toggle}
   - {t: Navi, h: toggle}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
   - BT CLR ALL
   - RGB OFF
   - RGB ON
@@ -239,8 +239,8 @@ layers:
   - PgDn
   - {t: Colemak, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-shift$$
   - LEFT META
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
